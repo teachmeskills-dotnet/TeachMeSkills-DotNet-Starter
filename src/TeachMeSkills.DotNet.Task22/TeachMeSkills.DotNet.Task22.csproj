@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TeachMeSkills.DotNet.Task10\TeachMeSkills.DotNet.Task10.csproj" />
+    <ProjectReference Include="..\TeachMeSkills.DotNet.Task17\TeachMeSkills.DotNet.Task17.csproj" />
   </ItemGroup>
 
 </Project>
