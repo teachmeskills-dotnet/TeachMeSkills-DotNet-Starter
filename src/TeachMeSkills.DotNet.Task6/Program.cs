@@ -21,7 +21,7 @@ namespace TeachMeSkills.DotNet.Task6
         {
             Random rnd = new Random();
             int operand1 = rnd.Next(0, 100);
-            Console.WriteLine($"Enter operand1:{operand1} ");
+            Console.WriteLine($"operand1:{operand1} ");
             Console.Write("Enter operand2: ");
             int operand2 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(Value);

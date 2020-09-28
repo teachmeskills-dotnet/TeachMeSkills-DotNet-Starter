@@ -8,27 +8,38 @@ namespace TeachMeSkills.DotNet.Task13
 {
     class Program
     {
-        private const string Value = "number2>number1";
+        private const string Value = "B > A";
 
         static void Main(string[] args)
         {
+
             Console.WriteLine(Value);
-            Console.WriteLine("Input number2:");
-            int value2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Input number1:");
-            int value1 = Convert.ToInt32(Console.ReadLine());
-            int min = value2 - value1;
-            if (value2 > value1)
+            Console.WriteLine("Input A:");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Input B:");
+            int B = Convert.ToInt32(Console.ReadLine());
+            if (B > A)
             {
                 int sum = 0;
-                int[] masiv = new int[min];
-                for (int i = 1; i < masiv.Length; i++)
+
+                int[] array1 = new int[100];
+                for (int i = 0; i < array1.Length; i++)
                 {
-                    masiv[i] = i;
-                    sum += masiv[i];
-                    Console.WriteLine(sum);
-                    Console.WriteLine(masiv[i]);
+                    array1[i] = i;
+                    if (array1[i] >= A && array1[i] <= B)
+                    {
+                        sum += array1[i];
+                        Console.WriteLine("Sum all elements:" + sum);
+                    }
+
+                    if (array1[i] >= A && array1[i] <= B && array1[i] % 2 != 0)
+                    {
+                        int odd = array1[i];
+                        Console.WriteLine("Odd Element: " + odd);
+                    }
+
                 }
+
             }
             else
             {

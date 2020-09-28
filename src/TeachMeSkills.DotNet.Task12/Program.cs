@@ -12,10 +12,9 @@ namespace TeachMeSkills.DotNet.Task12
             bool A = true;
             bool B = true;
 
-           bool Morgan = A | B;
-            bool DeMorgan = !A | B;
-            Morgan = DeMorgan;
-            Console.WriteLine(Morgan);
+          
+            if (A|B==!(!A&!B))
+            Console.WriteLine("Morgan");
         }
     }
 }
