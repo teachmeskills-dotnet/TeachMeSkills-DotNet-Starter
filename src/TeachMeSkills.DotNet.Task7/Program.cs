@@ -10,65 +10,42 @@ namespace TeachMeSkills.DotNet.Task7
     {
         static void Main(string[] args)
         {
-            //Random rnd = new Random();
-            //int operand1 = rnd.Next(0, 100);
-            int  operand1 = Convert.ToInt32(Console.ReadLine());
-            int[] mas1 = new int[15];// 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
-            int[] mas2 = new int[100];
-            int[] mas3 = new int[100];
-            int[] mas4 = new int[102];
-
-            if (operand1 <= 100 && operand1 >= 0)
+            int value1;
+            Console.WriteLine("100 >= value1 >= 0");
+            Console.WriteLine("Enter value1:");
+            string str1 = Console.ReadLine();
+            bool canparse = int.TryParse(str1, out value1);
+            if (canparse)
             {
-                for (int x = 0; x < 15; x++)
+                if (value1 > 0 && value1 < 100)
                 {
-                    mas1[x] = x;
-                    if (operand1 == x)
+                    if (value1 >= 0 && value1 <= 14)
                     {
-                        Console.WriteLine($"Operand insert in mas1 {operand1}");
-                        break;
+                        Console.WriteLine("Interval 1: [0 - 14]");
                     }
-                    //Console.WriteLine(mas1[x]);
+                    else if (value1 >= 15 && value1 <= 35)
+                    {
+                        Console.WriteLine("Interval 2: [15 - 35]");
+                    }
+                    else if (value1 >= 36 && value1 <= 50)
+                    {
+                        Console.WriteLine("Interval 3: [36 - 50]");
+                    }
+                    else if (value1 >= 50 && value1 <= 100)
+                    {
+                        Console.WriteLine("Interval 4: [36 - 50]");
+                    }
                 }
-                for (int y = 15; y < 36; y++)
+                else
                 {
-
-                    mas2[y] = y;
-                    if (operand1 == y)
-                    {
-                        Console.WriteLine($"Operand insert in mas2 {operand1}");
-                        break;
-                    }
-                    //Console.WriteLine(mas2[y]);
-                }
-
-                for (int z = 36; z < 52; z++)
-                {
-                    mas3[z] = z;
-                    if (operand1 == z)
-                    {
-                        Console.WriteLine($"Operand insert in mas3 {operand1}");
-                        break;
-                    }
-                    //Console.WriteLine(mas3[z]);
-
-                }
-                for (int n = 50; n < 101; n++)
-                {
-                    mas4[n] = n;
-                    if (operand1 == n)
-                    {
-                        Console.WriteLine($"Operand insert in mas4 {operand1}");
-                        break;
-                    }
-                    //Console.WriteLine(mas4[n]);
+                    Console.WriteLine("Incorect input");
                 }
             }
             else
             {
                 Console.WriteLine("Incorect input");
             }
-            Console.ReadKey();
+
         }
     }
 }

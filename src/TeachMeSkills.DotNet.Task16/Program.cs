@@ -10,18 +10,32 @@ namespace TeachMeSkills.DotNet.Task16
     {
         static void Main(string[] args)
         {
-            //int userInput1 = Convert.ToInt32(Console.ReadLine());
-            //int userInput2 = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < 15; i++)
+            Console.WriteLine("Введите M");
+            int M = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите N");
+            int N = int.Parse(Console.ReadLine());
+            for (int j = 0; j < N; j++)
             {
-                Console.WriteLine("*");
-                Console.Write("*");
-                Console.Write("*");
-                Console.Write("*");
-                Console.Write("*");
-                Console.Write("*");
-                Console.Write("*");
+                Console.WriteLine();
+                for (int i = 0; i < M; i++)
+                {
+                    Console.Write("*");
+                }
+                
             }
+            //Console.WriteLine();
+            //for (int j = 0; j < N; j++)
+            //{
+            //    for (int i = 0; i < M; i++)
+            //    {
+            //        if (j == 0 || j == N - 1) Console.Write("*");
+            //        else if (i == 0 || i == M - 1) Console.Write("*");
+            //        else Console.Write(" ");
+            //    }
+            //    Console.WriteLine();
+            //}
+            Console.ReadKey();
+
         }
     }
 }

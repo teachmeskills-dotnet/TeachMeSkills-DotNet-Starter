@@ -16,37 +16,44 @@ namespace TeachMeSkills.DotNet.Task18
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Sqr());
+            bool prost = true;
+            Console.WriteLine("enter number\n");
+            int n = int.Parse(Console.ReadLine());
+            if (n<0)
+            {
+                Console.WriteLine("minus value");
+            }
+            else if (n>=0)
+            {
+                Console.WriteLine("positive value");
+            }
+            for (int i = 2; i <= n / 2; i++)
+            {
+                if (n % i == 0)
+                {
+                    prost = false;
+                    break;
+                }
+            }
+            if (prost)
+            {
+                Console.WriteLine("easy");
+            }
+            else
+            {
+                Console.WriteLine("uneasy");
+            }
+            if (n % 2 == 0 || n % 3 == 0 || n % 5 == 0 || n % 6 == 0 || n % 9 == 0)
+            {
+                Console.WriteLine("Task 3 ready");
+            }
+            else
+            {
+                Console.WriteLine("task 3 not ready");
+            }
+            Console.ReadKey();
         }
-        static double Sqr()
-        {
-            double userInput = Convert.ToDouble(Console.ReadLine());
-            if (userInput % 2 == 0)
-            {
-                Console.WriteLine("1) Input value even");
-            }
-            else
-            {
-                Console.WriteLine("1) Input value odd");
-            }
-            if (userInput % 1 == 0 && userInput % userInput == 0)
-            {
-                Console.WriteLine("2) userInput simple value");
-            }
-            else
-            {
-                Console.WriteLine("2) userInput hard value");
-            }
-            if (userInput % 2 == 0 || userInput % 3 == 0 || userInput % 5 == 0 || userInput % 6 == 0 || userInput % 9 == 0)
-            {
-                Console.WriteLine("3) userInput 3 case works");
-            }
-            else
-            {
-                Console.WriteLine("3) userInput 3 case not works ");
-            }
-            return 1;
 
         }
-    }
+
 }

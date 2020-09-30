@@ -22,7 +22,8 @@ namespace TeachMeSkills.DotNet.Task25
     {
         static void Main(string[] args)
         {
-            Console.WriteLine();
+
+
         }
         static int MyReverse(int[]array1)
         {
