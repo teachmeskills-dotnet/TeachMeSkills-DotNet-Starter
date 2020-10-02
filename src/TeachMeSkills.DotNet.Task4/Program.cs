@@ -12,15 +12,22 @@ namespace TeachMeSkills.DotNet.Task4
     {
         static void Main(string[] args)
         {
+            double ob;
+            double plo;
             Console.WriteLine("Input R:");
             double R = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Input h: ");
             int h = Convert.ToInt32(Console.ReadLine());
 
-            double V = 2 * R * Math.PI * h;
-            double S = 2 * Math.PI * R*(R + h);
-            Console.WriteLine($"Result:\nV= {(int)V}\nS= {(int)S}");
+            MATH1(R, h, out ob, out plo);
+            Console.WriteLine($"Result:\nV= {(int)ob}\nS= {(int)plo}");
 
+        }
+        static double MATH1(double R, double h, out double V,out double S)
+        {
+            V = 2 * R * Math.PI * h;
+            S = 2 * Math.PI * R * (R + h);
+            return 1;
         }
 
     }
