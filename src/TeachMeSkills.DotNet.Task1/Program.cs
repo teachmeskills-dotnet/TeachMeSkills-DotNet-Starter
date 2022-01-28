@@ -6,9 +6,10 @@ namespace TeachMeSkills.DotNet.Task1
     {
         static void Main(string[] args)
         {
-            // Your code here..
+            double pi = 3.141592653;
+            double ei = 2.7182818284590452;
 
-            Console.ReadLine();
+            Console.WriteLine($" Число Пи = {pi}, Число Ei = {ei}  ");
         }
     }
 }
